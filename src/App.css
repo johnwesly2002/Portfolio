@@ -529,6 +529,7 @@ line-height: 1.4;
 
 #Contact p {
   width: 800px;
+  text-align: justify;
   font-family: var(--fontfamily);
   font-size: var(--fontcolor);
 }
