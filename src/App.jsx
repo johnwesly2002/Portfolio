@@ -6,6 +6,8 @@ import { AiOutlineAlignRight} from 'react-icons/ai';
 import { LuGithub } from "react-icons/lu";
 import { FiLinkedin } from "react-icons/fi";
 import { SiLeetcode } from "react-icons/si";
+import { FaRegFolder } from "react-icons/fa6";
+import { GoLinkExternal } from "react-icons/go";
 import Resume from './assets/Johnwesly_Uchula_Resume.pdf'
 import Profile from './assets/professional_Profile.jpeg'
 function App() {
@@ -172,7 +174,181 @@ const handleEducationTabClick = (index) => {
             </div>
         </div>
       </section>
-      <section id='Projects'>
+      <section id='Projects' className='Projects'>
+      <h2 className='projectsectionheading'>Projects</h2>
+      <ul className='projects-container'>
+        <li className='projectLi'>
+          <div className="projectbox">
+            <header>
+              <div className="projectTop">
+                <div className="folder">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <div className="projectLinks">
+                <a href='https://github.com/johnwesly2002/SnapWallet'><LuGithub size={5} /></a>
+                </div>
+              </div>
+            </header>
+            <h3 className='project-title'>
+              <a target='_blank' rel='noopener noreferrer'>Snap Wallet</a>
+            </h3>
+            <div className="project-description">
+              <p>Designed a secure digital wallet with real-time transaction tracking and analytics</p>
+            </div>
+            <div className="footer">
+              <ul className="project-tech-list">
+                <li>React Native</li>
+                <li>TypeScript</li>
+                <li>Redux</li>
+                <li>Realm</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li className='projectLi'>
+          <div className="projectbox">
+            <header>
+              <div className="projectTop">
+                <div className="folder">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <div className="projectLinks">
+                <a href='https://github.com/johnwesly2002/Talks'><LuGithub size={10} /></a>
+                </div>
+              </div>
+            </header>
+            <h3 className='project-title'>
+              <a target='_blank' rel='noopener noreferrer'>Talks</a>
+            </h3>
+            <div className="project-description">
+              <p> Developed real-time messaging features supporting multimedia file sharing with Firebase</p>
+            </div>
+            <div className="footer">
+              <ul className="project-tech-list">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Firebase</li>
+                <li>Google Cloud</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li className='projectLi'>
+          <div className="projectbox">
+            <header>
+              <div className="projectTop">
+                <div className="folder">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <div className="projectLinks">
+                {/* <a href=''><LuGithub size={10} /></a> */}
+                </div>
+              </div>
+            </header>
+            <h3 className='project-title'>
+              <a target='_blank' rel='noopener noreferrer'>Leap</a>
+            </h3>
+            <div className="project-description">
+              <p>Built an e-commerce platform for renting clothes, integrating secure payment gateways.</p>
+            </div>
+            <div className="footer">
+              <ul className="project-tech-list">
+                <li>React Native</li>
+                <li>TypeScript</li>
+                <li>Redux</li>
+                <li>Spring Boot</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li className='projectLi'>
+          <div className="projectbox">
+            <header>
+              <div className="projectTop">
+                <div className="folder">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <div className="projectLinks">
+                <a href='https://github.com/johnwesly2002/Portfolio'><LuGithub size={10} /></a>
+                <a href=''><GoLinkExternal size={10} /></a>
+                </div>
+              </div>
+            </header>
+            <h3 className='project-title'>
+              <a target='_blank' rel='noopener noreferrer'>Profiolo</a>
+            </h3>
+            <div className="project-description">
+              <p>Designed a Personal website for Showcasing my work and achivements using React and vanilla css</p>
+            </div>
+            <div className="footer">
+              <ul className="project-tech-list">
+                <li>React</li>
+                <li>Javascript</li>
+                <li>Typescript</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li className='projectLi'>
+          <div className="projectbox">
+            <header>
+              <div className="projectTop">
+                <div className="folder">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <div className="projectLinks">
+                <a href='https://github.com/johnwesly2002/Nike-website'><LuGithub size={10} /></a>
+                <a href='https://nike-website-by-john.netlify.app/#'><GoLinkExternal size={10} /></a>
+                </div>
+              </div>
+            </header>
+            <h3 className='project-title'>
+              <a target='_blank' rel='noopener noreferrer'>Nike Website</a>
+            </h3>
+            <div className="project-description">
+              <p>Designed a Nike Website using Tailwind and Javascript for Explore the dynamic css through Tailwind CSS.</p>
+            </div>
+            <div className="footer">
+              <ul className="project-tech-list">
+                <li>Tailwind</li>
+                <li>CSS</li>
+                <li>Parcel</li>
+                <li>Javascript</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li className='projectLi'>
+          <div className="projectbox">
+            <header>
+              <div className="projectTop">
+                <div className="folder">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <div className="projectLinks">
+                <a href='https://github.com/johnwesly2002/React-countries'><LuGithub size={10} /></a>
+                </div>
+              </div>
+            </header>
+            <h3 className='project-title'>
+              <a target='_blank' rel='noopener noreferrer'>Explore Countries</a>
+            </h3>
+            <div className="project-description">
+              <p>Designed and Developed a Project to Explore the Countries and their neighbour Countries based on Regions and continents.</p>
+            </div>
+            <div className="footer">
+              <ul className="project-tech-list">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Javascript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
 
       </section>
       <section id='Education'>
@@ -265,9 +441,16 @@ const handleEducationTabClick = (index) => {
         </div>
       </section>
       <section id='Contact'>
-
+      <h2 className='Contactheading'>Looks Interesting?</h2>
+      <h2 className='ContactTitle'>Get In Touch</h2>
+      <p>I’m currently looking for any new interesting opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
+      <a href='mailto:ujohnwesly8@gmail.com' target='_blank' className='Hire_button'>Hire Me</a>
       </section>
     </main>
+    <footer>
+      <p>Designed and Made By&nbsp;</p>
+      <p>John wesly Uchula</p>
+    </footer>
     </>
   )
 }
