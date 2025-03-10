@@ -603,11 +603,11 @@ line-height: 1.4;
   box-shadow: 3px 3px 0px 0px var(--hovercolor);
   color: var(--fontcolor);
 }
-.Hire_button:hover {
+.Contact_button:hover {
   box-shadow: 3px 3px 0px 0px var(--hovercolor);
   color: var(--fontcolor);
 }
-.Hire_button {
+.Contact_button {
   padding: 10px 20px;
   margin-top: 90px;
   font-family: var(--fontfamily);
