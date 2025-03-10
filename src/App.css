@@ -528,8 +528,8 @@ line-height: 1.4;
 }
 
 #Contact p {
-  width: 800px;
-  text-align: justify;
+  max-width: 800px;
+  text-align:center;
   font-family: var(--fontfamily);
   font-size: var(--fontcolor);
 }
