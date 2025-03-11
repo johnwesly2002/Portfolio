@@ -237,6 +237,10 @@ line-height: 1.4;
   cursor: default;
   transition: var(--transition);
 }
+.Projects .projectbox:hover {
+  transform: scale(1.05);
+  transition: var(--transition);
+}
 .Projects .projectbox {
     box-shadow: 0 10px 30px -15px var(--backgroundhover);
     display: flex;
