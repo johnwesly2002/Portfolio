@@ -207,7 +207,7 @@ line-height: 1.4;
 
 #Contact {
   display: flex;
-  margin-top: 20px;
+  margin-top: 80px;
   margin-inline: 40px;
   justify-content: center;
   align-items: center;
@@ -610,12 +610,19 @@ line-height: 1.4;
 .Contact_button {
   padding: 10px 20px;
   margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-family: var(--fontfamily);
   background-color: transparent;
   color: var(--fontcolor);
   border: 2px solid var(--fontcolor);
   border-radius: var(--borderradius);
   transition: var(--transition);
+}
+.Contact_button > * {
+  margin-left: 8px;
 }
 footer {
   display: flex;
@@ -625,6 +632,9 @@ footer {
 footer p {
   font-family: var(--fontfamily);
   font-size: 12px;
+}
+footer .lottie {
+  margin-top: -15px;
 }
 @media screen and (max-width: 768px) {
   .header_menuicon {

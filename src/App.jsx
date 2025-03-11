@@ -9,7 +9,14 @@ import { SiLeetcode } from "react-icons/si";
 import { FaRegFolder } from "react-icons/fa6";
 import { GoLinkExternal } from "react-icons/go";
 import Resume from './assets/Johnwesly_Uchula_Resume.pdf'
-import Profile from './assets/professional_Profile.jpeg'
+import Profile from './assets/professional_Profile.jpeg';
+import Lottie from 'react-lottie';
+import Logo from './assets/Ani3.json';
+import AboutImage from './assets/Ani2.json';
+import footerImg from './assets/Ani1.json';
+import Contact from './assets/Ani5.json';
+import Education from './assets/Ani6.json';
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
@@ -31,6 +38,14 @@ const handleEducationTabClick = (index) => {
       tabIndexElement.style.transition = `transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s`;
   }
 };
+const defaultOptions = {
+  loop: true,           
+  autoplay: true,     
+  animationData: Logo, 
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice', 
+  }
+};
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   return (
@@ -38,14 +53,7 @@ const handleEducationTabClick = (index) => {
     <header>
       <div className='header_content'>
         <a href="/">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-        <title>Logo</title>
-        <rect class="border" x="2" y="2" width="96" height="96" rx="10" ry="10"/>
-        
-        <path class="letter-j"
-              d="M 60,30 L 40,30 L 40,60 L 30,60 L 30,50 L 20,50 L 20,65 
-                 L 40,75 L 60,65 L 60,50 L 50,50 L 50,60 L 40,60 Z" />
-    </svg>
+        <Lottie   options={defaultOptions} height={50} width={70} />
         </a>
         <AiOutlineAlignRight 
           className='header_menuicon'
@@ -105,7 +113,14 @@ const handleEducationTabClick = (index) => {
           </ul>
         </div>
         <div className="AboutImage">
-          <img className='Profile_Image' src={Profile} alt="Profile" />
+          <Lottie options={{
+             loop: true,           
+             autoplay: true,     
+             animationData: AboutImage, 
+             rendererSettings: {
+               preserveAspectRatio: 'xMidYMid slice', 
+             }
+          }} height={400} width={600} />
         </div>
       </div>
       </section>
@@ -378,78 +393,104 @@ const handleEducationTabClick = (index) => {
                     Gowtham Model School
                 </button>
                 <div className='EducationTabIndex'></div>
-            </div>
+      </div>
+      <div className="EducationContent">
+          {EducationactiveTab === 0 && (
+              <div id="panel-0" className="EducationContentInner" role="tabpanel">
+              <h3>
+                  <span>Bachelor of Technology</span>
+                  <span>&nbsp;@ &nbsp;
+                      <a href="https://adityauniversity.in/" target="_blank" rel="noopener noreferrer">Aditya University</a>
+                  </span>
+              </h3>
+              <p className="location">Kakinada, India</p>
+              <p className="range">June 2019 - May 2023</p>
+              <ul>
+                  <li>Branch - CSE (Computer Science and Engineering).</li>
+                  <li>8.67 CGPA </li>
+                  <li>University - Jawaharlal Nehru Technological University, Kakinada.</li>
+                  <li>Medium English.</li>
+              </ul>
+          </div>
+          )}
 
-            <div className="EducationContent">
-                {EducationactiveTab === 0 && (
-                    <div id="panel-0" className="EducationContentInner" role="tabpanel">
-                    <h3>
-                        <span>Bachelor of Technology</span>
-                        <span>&nbsp;@ &nbsp;
-                            <a href="https://adityauniversity.in/" target="_blank" rel="noopener noreferrer">Aditya University</a>
-                        </span>
-                    </h3>
-                    <p className="location">Kakinada, India</p>
-                    <p className="range">June 2019 - May 2023</p>
-                    <ul>
-                        <li>Branch - CSE (Computer Science and Engineering).</li>
-                        <li>8.67 CGPA </li>
-                        <li>University - Jawaharlal Nehru Technological University, Kakinada.</li>
-                        <li>Medium English.</li>
-                    </ul>
-                </div>
-                )}
+          {EducationactiveTab === 1 && (
+              <div id="panel-1" className="EducationContentInner" role="tabpanel">
+              <h3>
+              <span>Senior Secondary Education - Intermediate</span>
+                  <span>&nbsp;@&nbsp;
+                      <a href="https://adityauniversity.in/" target="_blank" rel="noopener noreferrer">Sri Chaitanya Junior College</a>
+                  </span>
+              </h3>
+              <p className="location">Razole, India</p>
+              <p className="range">June 2016 - April 2018</p>
+              <ul>
+                  <li>Board - Andhra Pradesh Board of Intermediate Education (APBIE).</li>
+                  <li>8.90 CGPA</li>
+                  <li>Stream - Mathematics & Science.</li>
+                  <li>Medium - English, Sanskrit(II).</li>
 
-                {EducationactiveTab === 1 && (
-                    <div id="panel-1" className="EducationContentInner" role="tabpanel">
-                    <h3>
-                    <span>Senior Secondary Education - Intermediate</span>
-                        <span>&nbsp;@&nbsp;
-                            <a href="https://adityauniversity.in/" target="_blank" rel="noopener noreferrer">Sri Chaitanya Junior College</a>
-                        </span>
-                    </h3>
-                    <p className="location">Razole, India</p>
-                    <p className="range">June 2016 - April 2018</p>
-                    <ul>
-                        <li>Board - Andhra Pradesh Board of Intermediate Education (APBIE).</li>
-                        <li>8.90 CGPA</li>
-                        <li>Stream - Mathematics & Science.</li>
-                        <li>Medium - English, Sanskrit(II).</li>
+              </ul>
+          </div>
+          )}
+          {EducationactiveTab === 2 && (
+              <div id="panel-1" className="EducationContentInner" role="tabpanel">
+              <h3>
+                  <span>Secondary Education</span>
+                  <span className="company">&nbsp;@ &nbsp;
+                      <a href="https://www.nineleaps.com/" target="_blank" rel="noopener noreferrer">Gowtham Model School</a>
+                  </span>
+              </h3>
+              <p className="location">Malkipuram, India</p>
+              <p className="range">June 2015 - April 2016</p>
+              <ul>
+                  <li>Board - Board of Secondary Education of Andhra Pradesh.</li>
+                  <li>9.3 CGPA</li>
+                  <li>Medium - English, Hindi(II).</li>
 
-                    </ul>
-                </div>
-                )}
-                {EducationactiveTab === 2 && (
-                    <div id="panel-1" className="EducationContentInner" role="tabpanel">
-                    <h3>
-                        <span>Secondary Education</span>
-                        <span className="company">&nbsp;@ &nbsp;
-                            <a href="https://www.nineleaps.com/" target="_blank" rel="noopener noreferrer">Gowtham Model School</a>
-                        </span>
-                    </h3>
-                    <p className="location">Malkipuram, India</p>
-                    <p className="range">June 2015 - April 2016</p>
-                    <ul>
-                        <li>Board - Board of Secondary Education of Andhra Pradesh.</li>
-                        <li>9.3 CGPA</li>
-                        <li>Medium - English, Hindi(II).</li>
-
-                    </ul>
-                </div>
-                )}
-            </div>
-        </div>
+              </ul>
+          </div>
+          )}
+      </div>
+      <Lottie options={{
+        loop: true,           
+        autoplay: true,     
+        animationData: Education, 
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice', 
+        }
+      }} height={300} width={400} />
+      </div>
       </section>
       <section id='Contact'>
       <h2 className='Contactheading'>Looks Interesting?</h2>
       <h2 className='ContactTitle'>Get In Touch</h2>
       <p>I’m currently looking for any new interesting opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
-      <a href='mailto:ujohnwesly8@gmail.com' target='_blank' className='Contact_button'>Contact Me</a>
+      <a href='mailto:ujohnwesly8@gmail.com' target='_blank' className='Contact_button'><span>Contact Me</span> 
+        <Lottie options={{
+           loop: true,           
+           autoplay: true,     
+           animationData: Contact, 
+           rendererSettings: {
+             preserveAspectRatio: 'xMidYMid slice', 
+           }
+        }} height={30} width={40} />
+      </a>
       </section>
     </main>
     <footer>
       <p>Designed and Made By&nbsp;</p>
       <p>John wesly Uchula</p>
+      <div className='lottie'>
+      <Lottie options={{
+         loop: true,           
+         autoplay: true,     
+         animationData: footerImg, 
+         rendererSettings: {
+           preserveAspectRatio: 'xMidYMid slice', 
+         }
+      }} height={30} width={50} />
+      </div>
     </footer>
     </>
   )
