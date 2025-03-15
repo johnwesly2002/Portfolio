@@ -4,7 +4,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --scrollcolor: rgb(155 155 155 / 87%);
 }
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollcolor) ;
+}
+
 body { 
   margin: 0 auto;
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import './App.css';
 import logo from './assets/react.svg';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -8,6 +8,7 @@ import { FiLinkedin } from "react-icons/fi";
 import { SiLeetcode } from "react-icons/si";
 import { FaRegFolder } from "react-icons/fa6";
 import { GoLinkExternal } from "react-icons/go";
+import { CiFolderOn } from "react-icons/ci";
 import Resume from './assets/Johnwesly_Uchula_Resume.pdf'
 import Profile from './assets/professional_Profile.jpeg';
 import Lottie from 'react-lottie';
@@ -17,27 +18,86 @@ import footerImg from './assets/Ani1.json';
 import Contact from './assets/Ani5.json';
 import Education from './assets/Ani6.json';
 
+const handleTabUpdate  = (index, Tabclass) => {
+  const tabIndexElement = document.querySelector(Tabclass);
+  if (tabIndexElement) {
+    const isTabWidth = window.innerWidth <= 768; 
+    const transformValue = isTabWidth
+      ? `
+      top: auto;
+      bottom: 0px;
+      width: 100%;
+      max-width: var(--tab-width);
+      height: 2px;
+      margin-left: 50px;
+      transform: translateX(calc(${index} * var(--tab-width)))` 
+      : `
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 10;
+      width: 2px;
+      height: var(--tab-height);
+      border-radius: var(--border-radius);
+      background: var(--hovercolor);
+      transform: translateY(calc(${index} * var(--tab-height)))`; 
+
+    tabIndexElement.style = transformValue;
+    tabIndexElement.style.transition = `transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s`;
+  }
+};
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
   const [EducationactiveTab, setEducationActiveTab] = useState(0);
+  const [dimensions, setDimensions] = useState({ width: 600, height: 400 });
 
   const handleTabClick = (index) => {
     setActiveTab(index);
-    const tabIndexElement = document.querySelector('.TabIndex');
-    if (tabIndexElement) {
-        tabIndexElement.style.transform = `translateY(calc(${index} * var(--tab-height)))`;
-        tabIndexElement.style.transition = `transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s`;
+    handleTabUpdate(index,'.TabIndex');
+  };
+  const handleEducationTabClick = (index) => {
+    setEducationActiveTab(index);
+    handleTabUpdate(index,'.EducationTabIndex');
+  };
+  const updateSize = () => {
+    const width = window.innerWidth;
+    
+    if (width < 500) {
+      setDimensions({ width: 300, height: 200 });
+    } 
+    else if (width < 650) {
+      setDimensions({ width: 450, height: 400 });
+    }else if (width < 768) {
+      setDimensions({ width: 600, height: 450 });
     }
-};
-const handleEducationTabClick = (index) => {
-  setEducationActiveTab(index);
-  const tabIndexElement = document.querySelector('.EducationTabIndex');
-  if (tabIndexElement) {
-      tabIndexElement.style.transform = `translateY(calc(${index} * var(--tab-height)))`;
-      tabIndexElement.style.transition = `transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s`;
-  }
-};
+    else if (width < 840) {
+      setDimensions({ width: 400, height: 280 });
+    } 
+    else if (width < 940) {
+      setDimensions({ width: 500, height: 350 });
+    } else {
+      setDimensions({ width: 600, height: 400 });
+    }
+  };
+
+  useEffect(() => {
+    const handleResize = () => handleTabUpdate(activeTab,'.TabIndex');
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [activeTab]);
+  useEffect(() => {
+    const handleResize = () => handleTabUpdate(EducationactiveTab,'.EducationTabIndex');
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [EducationactiveTab]);
+  useEffect(() => {
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
 const defaultOptions = {
   loop: true,           
   autoplay: true,     
@@ -71,7 +131,7 @@ const defaultOptions = {
       </div>
       </div>
     </header>
-    <main>
+    <main id='main-Container'>
       <section id='main'>
         <div >
           <h1 className='intro-1'>Hi, my name is</h1>
@@ -120,7 +180,8 @@ const defaultOptions = {
              rendererSettings: {
                preserveAspectRatio: 'xMidYMid slice', 
              }
-          }} height={400} width={600} />
+          }} height={dimensions.height}
+          width={dimensions.width} />
         </div>
       </div>
       </section>
@@ -142,7 +203,8 @@ const defaultOptions = {
                 >
                     Nineleaps
                 </button>
-                <div className='TabIndex'></div>
+                
+                <div className='TabIndex horizontal'></div>
             </div>
 
             <div className="ExperienceContent">
@@ -197,10 +259,10 @@ const defaultOptions = {
             <header>
               <div className="projectTop">
                 <div className="folder">
-                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                <CiFolderOn className='ProjectIcon' size={30} />
                 </div>
                 <div className="projectLinks">
-                <a href='https://github.com/johnwesly2002/SnapWallet'><LuGithub size={5} /></a>
+                <a href='https://github.com/johnwesly2002/SnapWallet'><LuGithub className='ProjectIcon' size={30} /></a>
                 </div>
               </div>
             </header>
@@ -225,10 +287,10 @@ const defaultOptions = {
             <header>
               <div className="projectTop">
                 <div className="folder">
-                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                <CiFolderOn className='ProjectIcon' size={30} />
                 </div>
                 <div className="projectLinks">
-                <a href='https://github.com/johnwesly2002/Talks'><LuGithub size={10} /></a>
+                <a href='https://github.com/johnwesly2002/Talks'><LuGithub className='ProjectIcon' size={30} /></a>
                 </div>
               </div>
             </header>
@@ -253,7 +315,7 @@ const defaultOptions = {
             <header>
               <div className="projectTop">
                 <div className="folder">
-                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                <CiFolderOn className='ProjectIcon' size={30} />
                 </div>
                 <div className="projectLinks">
                 {/* <a href=''><LuGithub size={10} /></a> */}
@@ -281,11 +343,11 @@ const defaultOptions = {
             <header>
               <div className="projectTop">
                 <div className="folder">
-                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                <CiFolderOn className='ProjectIcon' size={30} />
                 </div>
                 <div className="projectLinks">
-                <a href='https://github.com/johnwesly2002/Portfolio'><LuGithub size={10} /></a>
-                <a href=''><GoLinkExternal size={10} /></a>
+                <a href='https://github.com/johnwesly2002/Portfolio'><LuGithub className='ProjectIcon' size={30} /></a>
+                <a href=''><GoLinkExternal size={30} /></a>
                 </div>
               </div>
             </header>
@@ -310,11 +372,11 @@ const defaultOptions = {
             <header>
               <div className="projectTop">
                 <div className="folder">
-                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                <CiFolderOn className='ProjectIcon' size={30} />
                 </div>
                 <div className="projectLinks">
-                <a href='https://github.com/johnwesly2002/Nike-website'><LuGithub size={10} /></a>
-                <a href='https://nike-website-by-john.netlify.app/#'><GoLinkExternal size={10} /></a>
+                <a href='https://github.com/johnwesly2002/Nike-website'><LuGithub className='ProjectIcon' size={30} /></a>
+                <a href='https://nike-website-by-john.netlify.app/#'><GoLinkExternal className='ProjectIcon' size={30} /></a>
                 </div>
               </div>
             </header>
@@ -339,10 +401,10 @@ const defaultOptions = {
             <header>
               <div className="projectTop">
                 <div className="folder">
-                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                <CiFolderOn className='ProjectIcon' size={30} />
                 </div>
                 <div className="projectLinks">
-                <a href='https://github.com/johnwesly2002/React-countries'><LuGithub size={10} /></a>
+                <a href='https://github.com/johnwesly2002/React-countries'><LuGithub className='ProjectIcon' size={30} /></a>
                 </div>
               </div>
             </header>
@@ -371,7 +433,7 @@ const defaultOptions = {
 
       <div className="Educationinner">
       <div className='EducationMenu'>
-                <button 
+                <button
                     onClick={() => handleEducationTabClick(0)} 
                     tabIndex={EducationactiveTab === 0 ? 0 : -1}
                     aria-selected={EducationactiveTab === 0}
@@ -392,7 +454,7 @@ const defaultOptions = {
                   >
                     Gowtham Model School
                 </button>
-                <div className='EducationTabIndex'></div>
+                <div className='EducationTabIndex horizontal'></div>
       </div>
       <div className="EducationContent">
           {EducationactiveTab === 0 && (
@@ -452,14 +514,14 @@ const defaultOptions = {
           </div>
           )}
       </div>
-      <Lottie options={{
+      {/* <Lottie options={{
         loop: true,           
         autoplay: true,     
         animationData: Education, 
         rendererSettings: {
           preserveAspectRatio: 'xMidYMid slice', 
         }
-      }} height={300} width={400} />
+      }} height={300} width={400} /> */}
       </div>
       </section>
       <section id='Contact'>
