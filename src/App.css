@@ -24,11 +24,7 @@
   box-sizing: inherit;
 }
 
-body {
-  background-color: var(--background-color);
-  margin: 0;
-  overflow-x: hidden;
-}
+
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0px 0px 10px;
@@ -809,4 +805,8 @@ footer .lottie {
     font-size: 10px;
   }
 }
-
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  overflow-x: hidden;
+}
