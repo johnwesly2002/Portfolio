@@ -347,7 +347,7 @@ const defaultOptions = {
                 </div>
                 <div className="projectLinks">
                 <a href='https://github.com/johnwesly2002/Portfolio'><LuGithub className='ProjectIcon' size={30} /></a>
-                <a href=''><GoLinkExternal size={30} /></a>
+                <a href='https://johnwesly-profiolo.netlify.app/'><GoLinkExternal size={30} /></a>
                 </div>
               </div>
             </header>
