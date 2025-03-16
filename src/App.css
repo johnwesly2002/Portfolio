@@ -21,7 +21,7 @@
   --tab-width: 120px;
 }
 *, ::before, ::after {
-  box-sizing: inherit;
+  box-sizing: border-box !important;
 }
 
 
