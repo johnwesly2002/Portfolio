@@ -227,6 +227,7 @@ line-height: 1.4;
 }
 .Projects .projectbox:hover {
   transform: scale(1.05);
+  box-shadow: 0 10px 40px -15px var(--hovercolor);
   transition: var(--transition);
 }
 .Projects .projectbox {
@@ -743,7 +744,11 @@ footer .lottie {
   }
 }
 
-
+@media screen and (max-width: 956px) {
+  .EducationImage{
+    display: none;
+  }
+}
 
 @media  screen and (min-width: 769px) {
   .header_menucontent{

@@ -51,6 +51,7 @@ function App() {
   const [activeTab, setActiveTab] = useState(0);
   const [EducationactiveTab, setEducationActiveTab] = useState(0);
   const [dimensions, setDimensions] = useState({ width: 600, height: 400 });
+  const [Edudimensions, setEduDimensions] = useState({ width: 600, height: 400 });
 
   const handleTabClick = (index) => {
     setActiveTab(index);
@@ -81,7 +82,31 @@ function App() {
       setDimensions({ width: 600, height: 400 });
     }
   };
-
+  const EdupdateSize = () => {
+    const width = window.innerWidth;
+    if (width <= 300) {
+      setEduDimensions({ width: 200, height: 200 });
+    } else if (width <= 500) {
+      setEduDimensions({ width: 300, height: 200 });
+    } 
+    else if (width <= 650) {
+      setEduDimensions({ width: 300, height: 200 });
+    }else if (width <= 768) {
+      setEduDimensions({ width: 300, height: 200 });
+    }
+    else if (width <= 840) {
+      setEduDimensions({ width: 300, height: 200 });
+    } 
+    else if (width <= 940) {
+      setEduDimensions({ width: 350, height: 250 });
+    }else if (width <= 1030) {
+      setEduDimensions({ width: 350, height: 250 });
+    }else if (width <= 1140) {
+      setEduDimensions({ width: 300, height: 350 });
+    } else {
+      setEduDimensions({ width: 600, height: 400 });
+    }
+  };
   useEffect(() => {
     const handleResize = () => handleTabUpdate(activeTab,'.TabIndex');
     window.addEventListener("resize", handleResize);
@@ -98,9 +123,18 @@ function App() {
     const handleResize = () => {
       updateSize();
     };
+    const EduhandleResize = () => {
+      EdupdateSize();
+    };
     window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", EduhandleResize);
+    EdupdateSize();
     updateSize();
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", EduhandleResize);
+    };
+
   }, []);
 const defaultOptions = {
   loop: true,           
@@ -518,14 +552,16 @@ const defaultOptions = {
           </div>
           )}
       </div>
-      {/* <Lottie options={{
+     <div className='EducationImage'>
+     <Lottie options={{
         loop: true,           
         autoplay: true,     
         animationData: Education, 
         rendererSettings: {
           preserveAspectRatio: 'xMidYMid slice', 
         }
-      }} height={300} width={400} /> */}
+      }} height={Edudimensions.height} width={Edudimensions.width} /> 
+     </div>
       </div>
       </section>
       <section id='Contact'>
