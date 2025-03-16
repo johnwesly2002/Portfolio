@@ -25,7 +25,6 @@
 }
 body {
   background-color: var(--background-color);
-  overflow-x: hidden !important;
 }
 
 
@@ -36,9 +35,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
 }
 
-header{
-
-  font-family: var(--fontfamily);
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 header a {
   text-decoration: none;
@@ -51,17 +51,14 @@ a {
   color: var(--fontcolor);
 }
 .header_content {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 10;
+  max-width: 1440px;
   display: flex;
   align-items: center;
   justify-content:space-between;
-  margin: 0 auto;
-  flex-shrink: 0;
   padding: 20px;
   backdrop-filter: blur(10px);
+  font-family: var(--fontfamily);
+
 }
 .header_close{
   display: none;

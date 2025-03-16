@@ -294,7 +294,7 @@ const defaultOptions = {
       <ul className='projects-container'>
         <li className='projectLi'>
           <div className="projectbox">
-            <header>
+            <div>
               <div className="projectTop">
                 <div className="folder">
                 <CiFolderOn className='ProjectIcon' size={30} />
@@ -303,7 +303,7 @@ const defaultOptions = {
                 <a href='https://github.com/johnwesly2002/SnapWallet'><LuGithub className='ProjectIcon' size={30} /></a>
                 </div>
               </div>
-            </header>
+            </div>
             <h3 className='project-title'>
               <a target='_blank' rel='noopener noreferrer'>Snap Wallet</a>
             </h3>
@@ -322,7 +322,7 @@ const defaultOptions = {
         </li>
         <li className='projectLi'>
           <div className="projectbox">
-            <header>
+            <div>
               <div className="projectTop">
                 <div className="folder">
                 <CiFolderOn className='ProjectIcon' size={30} />
@@ -331,7 +331,7 @@ const defaultOptions = {
                 <a href='https://github.com/johnwesly2002/Talks'><LuGithub className='ProjectIcon' size={30} /></a>
                 </div>
               </div>
-            </header>
+            </div>
             <h3 className='project-title'>
               <a target='_blank' rel='noopener noreferrer'>Talks</a>
             </h3>
@@ -350,7 +350,7 @@ const defaultOptions = {
         </li>
         <li className='projectLi'>
           <div className="projectbox">
-            <header>
+            <div>
               <div className="projectTop">
                 <div className="folder">
                 <CiFolderOn className='ProjectIcon' size={30} />
@@ -359,7 +359,7 @@ const defaultOptions = {
                 {/* <a href=''><LuGithub size={10} /></a> */}
                 </div>
               </div>
-            </header>
+            </div>
             <h3 className='project-title'>
               <a target='_blank' rel='noopener noreferrer'>Leap</a>
             </h3>
@@ -378,7 +378,7 @@ const defaultOptions = {
         </li>
         <li className='projectLi'>
           <div className="projectbox">
-            <header>
+            <div>
               <div className="projectTop">
                 <div className="folder">
                 <CiFolderOn className='ProjectIcon' size={30} />
@@ -388,7 +388,7 @@ const defaultOptions = {
                 <a href='https://johnwesly-profiolo.netlify.app/'><GoLinkExternal size={30} /></a>
                 </div>
               </div>
-            </header>
+            </div>
             <h3 className='project-title'>
               <a target='_blank' rel='noopener noreferrer'>Profiolo</a>
             </h3>
@@ -407,7 +407,7 @@ const defaultOptions = {
         </li>
         <li className='projectLi'>
           <div className="projectbox">
-            <header>
+            <div>
               <div className="projectTop">
                 <div className="folder">
                 <CiFolderOn className='ProjectIcon' size={30} />
@@ -417,7 +417,7 @@ const defaultOptions = {
                 <a href='https://nike-website-by-john.netlify.app/#'><GoLinkExternal className='ProjectIcon' size={30} /></a>
                 </div>
               </div>
-            </header>
+            </div>
             <h3 className='project-title'>
               <a target='_blank' rel='noopener noreferrer'>Nike Website</a>
             </h3>
@@ -436,7 +436,7 @@ const defaultOptions = {
         </li>
         <li className='projectLi'>
           <div className="projectbox">
-            <header>
+            <div>
               <div className="projectTop">
                 <div className="folder">
                 <CiFolderOn className='ProjectIcon' size={30} />
@@ -445,7 +445,7 @@ const defaultOptions = {
                 <a href='https://github.com/johnwesly2002/React-countries'><LuGithub className='ProjectIcon' size={30} /></a>
                 </div>
               </div>
-            </header>
+            </div>
             <h3 className='project-title'>
               <a target='_blank' rel='noopener noreferrer'>Explore Countries</a>
             </h3>
