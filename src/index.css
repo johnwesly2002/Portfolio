@@ -11,10 +11,6 @@ html {
   scrollbar-width: thin;
   scrollbar-color: var(--scrollcolor) ;
 }
-html, body{
-  margin: 0 auto;
-  overflow-x: hidden !important;
-}
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

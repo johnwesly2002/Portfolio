@@ -23,7 +23,10 @@
 *, ::before, ::after {
   box-sizing: border-box !important;
 }
-
+body {
+  background-color: var(--background-color);
+  overflow-x: hidden !important;
+}
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,9 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header{
-  position: sticky;
-  top: 0;
-  z-index: 10;
+
   font-family: var(--fontfamily);
 }
 header a {
@@ -50,7 +51,10 @@ a {
   color: var(--fontcolor);
 }
 .header_content {
-  max-width: 1440px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content:space-between;
@@ -836,6 +840,4 @@ footer .lottie {
     font-size: 10px;
   }
 }
-body {
-  background-color: var(--background-color);
-}
+
