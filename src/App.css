@@ -642,7 +642,6 @@ footer .lottie {
 #main-Container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0px 40px 0px 40px;
 }
 @media screen and (max-width: 768px) {
   .header_menuicon {
@@ -839,5 +838,4 @@ footer .lottie {
 }
 body {
   background-color: var(--background-color);
-  margin: 0 auto;
 }
