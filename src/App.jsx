@@ -21,7 +21,7 @@ import Education from './assets/Ani6.json';
 const handleTabUpdate  = (index, Tabclass) => {
   const tabIndexElement = document.querySelector(Tabclass);
   if (tabIndexElement) {
-    const isTabWidth = window.innerWidth <= 768; 
+    const isTabWidth = window.innerWidth <= 600; 
     const transformValue = isTabWidth
       ? `
       top: auto;
