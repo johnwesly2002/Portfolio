@@ -11,10 +11,8 @@ html {
   scrollbar-width: thin;
   scrollbar-color: var(--scrollcolor) ;
 }
-body { 
-  margin: 0 auto;
-}
 html, body{
+  margin: 0 auto;
   overflow-x: hidden !important;
 }
 /* @media (prefers-color-scheme: light) {

@@ -639,7 +639,7 @@ footer .lottie {
   position: relative;
   z-index: -1;
 }
-.main-Container {
+#main-Container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0px 40px 0px 40px;
@@ -839,5 +839,5 @@ footer .lottie {
 }
 body {
   background-color: var(--background-color);
-  overflow-x: hidden;
+  margin: 0 auto;
 }
