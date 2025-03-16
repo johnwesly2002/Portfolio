@@ -62,19 +62,20 @@ function App() {
   };
   const updateSize = () => {
     const width = window.innerWidth;
-    
-    if (width < 500) {
+    if (width <= 300) {
+      setDimensions({ width: 200, height: 200 });
+    } else if (width <= 500) {
       setDimensions({ width: 300, height: 200 });
     } 
-    else if (width < 650) {
+    else if (width <= 650) {
       setDimensions({ width: 450, height: 400 });
-    }else if (width < 768) {
+    }else if (width <= 768) {
       setDimensions({ width: 600, height: 450 });
     }
-    else if (width < 840) {
+    else if (width <= 840) {
       setDimensions({ width: 400, height: 280 });
     } 
-    else if (width < 940) {
+    else if (width <= 940) {
       setDimensions({ width: 500, height: 350 });
     } else {
       setDimensions({ width: 600, height: 400 });
@@ -94,9 +95,12 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, [EducationactiveTab]);
   useEffect(() => {
+    const handleResize = () => {
+      updateSize();
+    };
+    window.addEventListener("resize", handleResize);
     updateSize();
-    window.addEventListener("resize", updateSize);
-    return () => window.removeEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 const defaultOptions = {
   loop: true,           
@@ -194,14 +198,14 @@ const defaultOptions = {
                     tabIndex={activeTab === 0 ? 0 : -1}
                     aria-selected={activeTab === 0}
                 >
-                    Jio
+                    <span>Jio Platforms Limited</span>
                 </button>
                 <button 
                     onClick={() => handleTabClick(1)} 
                     tabIndex={activeTab === 1 ? 0 : -1}
                     aria-selected={activeTab === 1}
                 >
-                    Nineleaps
+                    <span>Nineleaps Technology Limited</span>
                 </button>
                 
                 <div className='TabIndex horizontal'></div>
@@ -438,21 +442,21 @@ const defaultOptions = {
                     tabIndex={EducationactiveTab === 0 ? 0 : -1}
                     aria-selected={EducationactiveTab === 0}
                 >
-                    Aditya University
+                    <span>Aditya University</span>
                 </button>
                 <button 
                     onClick={() => handleEducationTabClick(1)} 
                     tabIndex={EducationactiveTab === 1 ? 0 : -1}
                     aria-selected={EducationactiveTab === 1}
                 >
-                    Sri Chaitanya Junior College
+                    <span>Sri Chaitanya Junior College</span>
                 </button>
                 <button 
                     onClick={() => handleEducationTabClick(2)} 
                     tabIndex={EducationactiveTab === 2 ? 0 : -1}  
                     aria-selected={EducationactiveTab === 2} 
                   >
-                    Gowtham Model School
+                   <span> Gowtham Model School</span>
                 </button>
                 <div className='EducationTabIndex horizontal'></div>
       </div>
@@ -506,7 +510,7 @@ const defaultOptions = {
               <p className="location">Malkipuram, India</p>
               <p className="range">June 2015 - April 2016</p>
               <ul>
-                  <li>Board - Board of Secondary Education of Andhra Pradesh.</li>
+                  <li>Board - Board of Secondary Education of Andhra Pradesh (SSC).</li>
                   <li>9.3 CGPA</li>
                   <li>Medium - English, Hindi(II).</li>
 

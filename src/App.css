@@ -18,7 +18,7 @@
   --tab-height: 42px;
   --mobilefont: 18px;
   --headingweight: 800px;
-  --tab-width: 220px;
+  --tab-width: 120px;
 }
 *, ::before, ::after {
   box-sizing: inherit;
@@ -415,6 +415,13 @@ line-height: 1.4;
   text-align: left;
   white-space: nowrap;
 }
+.EducationMenu button span, .ExperienceMenu  button span {
+  display: inline-block;
+  max-width: 250px; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .ExperienceMenu button:hover, .ExperienceMenu button:focus-visible {
   background-color: var(--backgroundhover);
     color: var(--hovercolor);
@@ -540,7 +547,7 @@ line-height: 1.4;
     display: block;
     position: relative;
     top: 4px;
-    width: 400px;
+    min-width: 150px;
     flex-shrink: 0;
     height: 1px;
     margin-left: 20px;
@@ -640,6 +647,9 @@ footer .lottie {
   .header_menuicon {
     display: block;
   }
+  .AboutImage {
+    display: none;
+  }
   .Projects .projects-container {
     grid-template-columns: none;
     grid-template-rows: none;
@@ -647,15 +657,16 @@ footer .lottie {
   .Educationinner, .Experienceinner{
     display: flex;
     justify-content: flex-start;
+    
     flex-direction: column;
   }
   .EducationMenu, .ExperienceMenu {
     display: flex;
-    overflow-x: auto !important;
+    overflow-x: auto;  
     justify-content: flex-start;
     align-items: center;
     width: calc(100% + 100px);
-    padding-left: 50px;
+    padding-inline: 20px;
     margin-left: -50px;
     margin-bottom: 30px;
   }
@@ -682,9 +693,15 @@ footer .lottie {
     font-size: var(--fontsize-xss);
     border-bottom: 2px solid var(--fontcolor);
     text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
   }
+  .EducationMenu button span, .ExperienceMenu  button span {
+    max-width: 90px;
+}
   .EducationContent, .ExperienceContent {
     margin-left: 0px;
+    width: 100%;
   }
   section {
     padding: 120px 0px;
@@ -781,6 +798,12 @@ footer .lottie {
     display: block;
   }
 }
+@media (max-width: 480px) {
+  .EducationMenu button span {
+      max-width: 70px;
+  }
+}
+
 
 @media screen and (max-width: 375px) {
   .intro-1 {
@@ -807,6 +830,4 @@ footer .lottie {
 }
 body {
   background-color: var(--background-color);
-  margin: 0;
-  overflow-x: hidden;
 }

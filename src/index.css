@@ -10,10 +10,12 @@
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--scrollcolor) ;
+
 }
 
 body { 
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 /* @media (prefers-color-scheme: light) {
