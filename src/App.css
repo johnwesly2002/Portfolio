@@ -651,6 +651,9 @@ footer .lottie {
   #main {
     margin: 80px 20px;
   }
+  #Projects {
+    margin-inline: 10px;
+  }
   #About {
     margin-inline: 5px;
   }
