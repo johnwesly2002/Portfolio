@@ -10,8 +10,14 @@
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--scrollcolor) ;
-  overflow-x: hidden !important;
+}
+body {
+  background-color: var(--background-color);
+  
+}
 
+html {
+  overflow-x: hidden !important;
 }
 /* @media (prefers-color-scheme: light) {
   :root {

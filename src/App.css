@@ -24,9 +24,8 @@
   box-sizing: border-box !important;
 }
 body {
-  background-color: var(--background-color);
+  overflow-x: hidden !important;
 }
-
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0px 0px 10px;
@@ -36,8 +35,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
+  left: 0;
   z-index: 10;
 }
 header a {
@@ -52,6 +53,7 @@ a {
 }
 .header_content {
   max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content:space-between;
@@ -109,7 +111,7 @@ a {
 
 #main{
   display: flex;
-  margin-inline: 40px;
+  margin: 60px 40px;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
@@ -229,6 +231,8 @@ line-height: 1.4;
 .Projects .projectbox:hover {
   transform: scale(1.05);
   transition: var(--transition);
+  box-shadow: 0 10px 30px -15px var(--hovercolor);
+
 }
 .Projects .projectbox {
     box-shadow: 0 10px 30px -15px var(--backgroundhover);
@@ -644,6 +648,15 @@ footer .lottie {
   margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
+  #main {
+    margin: 80px 20px;
+  }
+  #About {
+    margin-inline: 5px;
+  }
+  #Education {
+    margin-inline: 10px;
+  }
   .header_menuicon {
     display: block;
   }
@@ -656,7 +669,7 @@ footer .lottie {
   }
  
   section {
-    padding: 120px 0px;
+    padding: 140px 0px;
   }
   .AboutInnerSection {
     display: flex;
@@ -736,7 +749,7 @@ footer .lottie {
   .heading1 {
     margin: 0px;
     font-family: var(--font-sans);
-    font-size: clamp(37px, 1vw, 30px);
+    font-size: clamp(40px, 6vw, 80px);
   }
   main-Container {
     padding: 0px 40px 0px 40px;
@@ -813,20 +826,17 @@ footer .lottie {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
+  #main {
+    margin: 20px 20px;
+  }
   .intro-1 {
     font-size: 13px;
-  }
-  .heading1 {
-    font-size: clamp(25px, 3vw, 20px);
   }
   .accounts {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-  }
-  .main-Container {
-    padding: 0px 40px 0px 40px;
   }
   .ContactTitle {
     font-size: clamp(30px, 5vw, 60px);
