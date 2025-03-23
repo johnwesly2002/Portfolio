@@ -356,6 +356,34 @@ const defaultOptions = {
                 <CiFolderOn className='ProjectIcon' size={30} />
                 </div>
                 <div className="projectLinks">
+                <a href='https://github.com/johnwesly2002/SnapSearch'><LuGithub className='ProjectIcon' size={30} /></a>
+                <a href='https://snapsearch-by-john.netlify.app/'><GoLinkExternal size={30} /></a>
+                </div>
+              </div>
+            </div>
+            <h3 className='project-title'>
+              <a target='_blank' rel='noopener noreferrer'>SnapSearch</a>
+            </h3>
+            <div className="project-description">
+              <p>Search which is developed using duckduckgo and to Explore the debouncing, throttling Functionalities of Search to Enhance the Performance</p>
+            </div>
+            <div className="footer">
+              <ul className="project-tech-list">
+                <li>Javscript</li>
+                <li>React</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li className='projectLi'>
+          <div className="projectbox">
+            <div>
+              <div className="projectTop">
+                <div className="folder">
+                <CiFolderOn className='ProjectIcon' size={30} />
+                </div>
+                <div className="projectLinks">
                 {/* <a href=''><LuGithub size={10} /></a> */}
                 </div>
               </div>
