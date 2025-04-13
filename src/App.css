@@ -3,17 +3,18 @@
   --fontsize: 20px;
   --fontsize-xs: 15px;
   --fontsize-xss: 12px;
-  --background-color: #242424;
+  --background-color: #000000;
   --fontfamily: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
   --font-sans:'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
   --padding: 8px;
   --paragraphfont: rgb(155 155 155 / 87%);
   --buttonshadowcolor: #ffff; 
   --intro2font: rgba(113, 113, 113, 0.87);
-  --backgroundhover: #323232;
+  --backgroundhover: #181818;
   --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
   --borderradius: 4px;
   --hovercolor: #0077ff;
+  --mobileheaderhover: #90c4ff;
   --tabactivecolor: rgba(51, 51, 51, 0.87);
   --tab-height: 42px;
   --mobilefont: 18px;
@@ -236,6 +237,7 @@ line-height: 1.4;
 }
 .Projects .projectbox {
     box-shadow: 0 10px 30px -15px var(--backgroundhover);
+    border: 1px solid #636363;
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -722,7 +724,7 @@ footer .lottie {
       width: min(75vw, 400px);
       height: 100vh;
       outline: 0px;
-      background-color: black;
+      background-color: #0077ff;
       box-shadow: -10px 0px 30px -15px rgba(2,12,27,0.7);
       z-index: 9;
       transform: translateX(0);
@@ -742,6 +744,12 @@ footer .lottie {
     font-size: var(--mobilefont);
     padding: 10px 20px 10px 20px;
   }
+  .header_content a:hover,
+  .header_button:hover {
+    color: var(--mobileheaderhover);
+    border-color: var(--mobileheaderhover);
+  }
+  
   .header_close{
     cursor: pointer;
     display: block;
