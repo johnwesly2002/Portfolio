@@ -171,6 +171,7 @@ const defaultOptions = {
     </header>
     <main id='main-Container'>
       <section id='main'>
+        <div className='topBlur'></div>
         <div >
           <h1 className='intro-1'>Hi, my name is</h1>
         </div>
@@ -193,6 +194,7 @@ const defaultOptions = {
         </div>
       </section>
       <section id='About'>
+      <div className='bottomBlur'></div>
       <h2 className='sectionheading'>About Me</h2>
       <div className='AboutInnerSection'>
         <div className="AboutContent">
@@ -290,6 +292,7 @@ const defaultOptions = {
         </div>
       </section>
       <section id='Projects' className='Projects'>
+        
       <h2 className='projectsectionheading'>Projects</h2>
       <ul className='projects-container'>
         <li className='projectLi'>

@@ -78,6 +78,7 @@ a {
 .header_button:hover {
   color: var(--hovercolor);
   border-color: var(--hovercolor);
+  transform: scale(1.2);
 }
 
 
@@ -116,6 +117,34 @@ a {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  position: relative;
+}
+
+.topBlur{
+  position: absolute;
+  top: -10px;
+  z-index: -1;
+  height: 300px;
+  width: 400px;
+  background-color: var(--hovercolor);
+  filter: blur(300px);
+}
+
+
+.bottomBlur{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+  height: 250px;
+  width: 250px;
+  background-color: var(--hovercolor);
+  filter: blur(250px);
+}
+
+.accounts_icons:hover {
+  transition: var(--transition);
+  transform: scale(1.5);
 }
 
 section {
@@ -177,6 +206,7 @@ line-height: 1.4;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  position: relative;
 }
 
 #Experience {
@@ -724,7 +754,7 @@ footer .lottie {
       width: min(75vw, 400px);
       height: 100vh;
       outline: 0px;
-      background-color: #0077ff;
+      background-color: #064db0;
       box-shadow: -10px 0px 30px -15px rgba(2,12,27,0.7);
       z-index: 9;
       transform: translateX(0);
@@ -748,6 +778,7 @@ footer .lottie {
   .header_button:hover {
     color: var(--mobileheaderhover);
     border-color: var(--mobileheaderhover);
+    transform: scale(1.2);
   }
   
   .header_close{
