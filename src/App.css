@@ -13,7 +13,7 @@
   --backgroundhover: #181818;
   --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
   --borderradius: 4px;
-  --hovercolor: #0077ff;
+  --hovercolor: #6c5cd0;
   --mobileheaderhover: #90c4ff;
   --tabactivecolor: rgba(51, 51, 51, 0.87);
   --tab-height: 42px;
@@ -24,9 +24,26 @@
 *, ::before, ::after {
   box-sizing: border-box !important;
 }
+
 body {
   overflow-x: hidden !important;
+  background: linear-gradient(
+    to bottom right,
+    #0f0f11 0%,
+    #0f0f11 40%,
+    #1c0e2d 72%,
+    #37306b 83%,
+    #79cad1 92%,
+    #b8f0e4 100%
+  );
+  background-color: #0f0f11;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
 }
+
+
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0px 0px 10px;
@@ -208,6 +225,14 @@ line-height: 1.4;
   flex-direction: column;
   position: relative;
 }
+#Achievements {
+  display: flex;
+  margin-inline: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+}
 
 #Experience {
   display: flex;
@@ -277,7 +302,8 @@ line-height: 1.4;
     height: 100%;
     padding: 30px;
     border-radius: var(--border-radius);
-    background-color: var(--backgroundhover);
+    /* background-color: var(--backgroundhover); */
+    backdrop-filter: blur(10px);
     transition: var(--transition);
     /* overflow:auto; */
     box-sizing: border-box;
@@ -754,7 +780,7 @@ footer .lottie {
       width: min(75vw, 400px);
       height: 100vh;
       outline: 0px;
-      background-color: #064db0;
+      background-color: #262146;
       box-shadow: -10px 0px 30px -15px rgba(2,12,27,0.7);
       z-index: 9;
       transform: translateX(0);

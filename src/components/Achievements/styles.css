@@ -1,0 +1,109 @@
+.section {
+  font-family: var(--fontfamily);
+}
+
+.Achcards {
+  margin: 50px 0 0 0;
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+  padding: 3rem;
+  border: 1px solid #636363;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.Achcards::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 0;
+  border-radius: 20px;
+}
+
+.Achcard {
+  z-index: 1;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  backdrop-filter: none;
+  flex: 1 1 250px;
+  min-width: 250px;
+  text-align: center;
+}
+
+.AchNum {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.Ach-label {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.target {
+  font-size: 2rem;
+}
+
+.subLabel {
+  font-size: 1.1rem;
+  margin-top: 0.25rem;
+}
+
+
+@media (max-width: 1024px) {
+  .AchNum {
+    font-size: 3.5rem;
+  }
+
+  .Achcard {
+    padding: 2rem;
+  }
+
+  .subLabel {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Achcards {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .Achcard {
+    width: 100%;
+    padding: 4.5rem;
+  }
+
+  .AchNum {
+    font-size: 4rem;
+  }
+
+  .subLabel {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Achcards {
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .Achcard {
+    padding: 4rem;
+  }
+
+  .AchNum {
+    font-size: 2.8rem;
+  }
+
+  .subLabel {
+    font-size: 0.85rem;
+  }
+}
