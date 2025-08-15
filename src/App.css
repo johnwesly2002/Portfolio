@@ -24,26 +24,10 @@
 *, ::before, ::after {
   box-sizing: border-box !important;
 }
-/* body {
+body {
   margin: 0;
   padding: 0;
-  color: white;
-  background-color: #0f0f11;
-
-  background-image: linear-gradient(
-    to bottom right,
-    #0f0f11 0%,
-    #0f0f11 37%,
-    #1c0e2d 59%,
-    #37306b 70%,
-    #79cad1 93%,
-    #b8f0e4 95%
-  );
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
-} */
+}
 
 /* body::before {
   content: '';
@@ -292,6 +276,7 @@ line-height: 1.4;
 #Achievements {
   display: flex;
   margin-inline: 40px;
+  font-family: var(--font-sans);
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
@@ -844,7 +829,7 @@ footer .lottie {
       width: min(75vw, 400px);
       height: 100vh;
       outline: 0px;
-      background-color: #262146;
+      background-color: var(--backgroundhover);
       box-shadow: -10px 0px 30px -15px rgba(2,12,27,0.7);
       z-index: 9;
       transform: translateX(0);

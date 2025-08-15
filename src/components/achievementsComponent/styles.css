@@ -1,16 +1,4 @@
-.achievements-section {
-  color: white;
-  text-align: center;
-  padding: 90px 20px;
-  font-family: var(--font-sans);
-}
 
-.sectionheading {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
 
 .achievements-grid {
   display: flex;

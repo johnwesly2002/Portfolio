@@ -48,7 +48,7 @@ const Achievements = () => {
   );
 
   return (
-    <section id="Achievements" className="section achievements-section">
+    <section id="Achievements">
       <h2 className="sectionheading">Achievements</h2>
       <div className="achievements-grid">
         {dsaAchievements.map(renderCard)}
