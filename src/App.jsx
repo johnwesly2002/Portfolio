@@ -1,15 +1,15 @@
 import { useState,useEffect } from 'react';
 import './App.css';
-import About from './components/aboutPage/About';
-import Footer from './components/footer/Footer';
-import Projects from './components/projects/Projects';
-import ContactPage from './components/contactPage/ContactPage';
-import DashboardPage from './components/dashboardPage/DashboardPage';
-import ExperiencePage from './components/experiencePage/ExperiencePage';
-import EducationPage from './components/educationPage/EducationPage';
-import Header from './components/header/Header';
-import Achievements from './components/achievements/Achievements';
-import Background from './components/background/Background';
+import About from './components/aboutPageComponent/About';
+import Footer from './components/footerComponent/Footer';
+import Projects from './components/projectsComponent/Projects';
+import ContactPage from './components/contactPageComponent/ContactPage';
+import DashboardPage from './components/dashboardPageComponent/DashboardPage';
+import ExperiencePage from './components/experiencePageComponent/ExperiencePage';
+import EducationPage from './components/educationPageComponent/EducationPage';
+import Header from './components/headerComponent/Header';
+import Achievements from './components/achievementsComponent/Achievements';
+import Background from './components/backgroundComponent/Background';
 
 
 const handleTabUpdate  = (index, Tabclass) => {

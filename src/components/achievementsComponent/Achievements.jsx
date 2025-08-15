@@ -6,7 +6,7 @@ import { AiOutlineFire } from "react-icons/ai";
 import { GoGitMerge } from "react-icons/go";
 import { SiLeetcode } from "react-icons/si";
 import { LuBrainCircuit } from "react-icons/lu";
-import SpotlightCard from '../constants/spotlightCard/SpotlightCard.jsx';
+import SpotlightCard from '../constants/spotlightCardComponent/SpotlightCard.jsx';
 const Achievements = () => {
   const dsaAchievements = [
 { 
