@@ -4,10 +4,10 @@ import { LuGithub } from "react-icons/lu";
 import { GoLinkExternal } from "react-icons/go";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { projects } from "../projects/Projects";
+import { projects } from "../projects/Projects.jsx";
 import "./styles.css";
 import { IoArrowBackOutline } from "react-icons/io5";
-import Background from "../background/Background";
+import Background from "../background/Background.jsx";
 
 const ProjectsArchive = () => {
   const navigate = useNavigate();
