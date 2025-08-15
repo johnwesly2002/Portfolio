@@ -1,0 +1,66 @@
+.ProjectsArchive {
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: var(--font-sans);
+}
+
+.archive-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.archive-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.archive-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.archive-item {
+  backdrop-filter: 10px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(232, 232, 232, 0.123);
+}
+
+.archive-item:hover {
+  transform: translateY(-3px);
+}
+
+.archive-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.folder-icon {
+  color: #7CFF67;
+}
+
+.archive-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.archive-tech {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.archive-links a {
+  color: white;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+

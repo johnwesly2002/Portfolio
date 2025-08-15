@@ -5,11 +5,8 @@ import Contact from "../../assets/Ani5.json";
 import { motion } from "framer-motion";
 const ContactPage = () => {
 	return (
-		<motion.section
+		<section
 			id="Contact"
-			initial={{ opacity: 0, y: 30 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			transition={{ duration: 1 }}
 		>
 			<h2 className="Contactheading">Looks Interesting?</h2>
 			<h2 className="ContactTitle">Get In Touch</h2>
@@ -37,7 +34,7 @@ const ContactPage = () => {
 					width={40}
 				/>
 			</a>
-		</motion.section>
+		</section>
 	);
 };
 

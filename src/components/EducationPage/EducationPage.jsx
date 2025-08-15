@@ -11,10 +11,7 @@ const EducationPage = ({ EducationactiveTab, handleEducationTabClick, Edudimensi
   };
 
   return (
-    <motion.section id='Education' 
-    	initial={{ opacity: 0, y: 30 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			transition={{ duration: 1 }}>
+    <section id='Education'>
       <h2 className='sectionheading'>Where I’ve Studied</h2>
       <div className="Educationinner">
         <div className='EducationMenu'>
@@ -92,7 +89,7 @@ const EducationPage = ({ EducationactiveTab, handleEducationTabClick, Edudimensi
           <Lottie options={defaultOptions} height={Edudimensions.height} width={Edudimensions.width} />
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

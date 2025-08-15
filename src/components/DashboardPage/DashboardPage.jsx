@@ -3,6 +3,8 @@ import { LuGithub } from "react-icons/lu";
 import { FiLinkedin } from "react-icons/fi";
 import { SiLeetcode } from "react-icons/si";
 import {motion} from 'framer-motion';
+import ShinyText from '../constants/ShinyText/ShinyText';
+import SplitText from '../constants/SplitText/SplitText';
 const DashboardPage = ({transition}) => {
     const containerVariants = {
   hidden: {},
@@ -26,10 +28,7 @@ const itemVariants = {
   },
 };
 	return (
-		<motion.section id="main" 				
-		initial={{ opacity: 0, y: 50 }}
-		whileInView={{ opacity: 1, y: 0 }}
-		transition={{ duration: 1 }}>
+		<section id="main">
 			<div>
 				<h1 className="intro-1">Hi, my name is</h1>
 			</div>
@@ -40,7 +39,8 @@ const itemVariants = {
 				<h3 className="heading1">I Build web & mobile apps.</h3>
 			</div>
 			<div>
-				<p>I'm a Passionate Software Engineer and Coder</p>
+				{/* <p>I'm a Passionate Software Engineer and Coder</p> */}
+				<ShinyText text="I'm a Passionate Software Engineer and Coder" disabled={false} speed={3} className='custom-class' />
 				<p>
 					Currently Working as a SDE-1 at{" "}
 					<a href="https://www.jio.com/platforms/">Jio</a>{" "}
@@ -75,7 +75,7 @@ const itemVariants = {
 					Hire Me
 				</motion.a>
 			</motion.div>
-		</motion.section>
+		</section>
 	);
 };
 

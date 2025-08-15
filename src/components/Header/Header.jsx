@@ -1,10 +1,11 @@
 import '../../App.css';
 import Lottie from 'react-lottie';
-import Logo from '../../assets/Ani3.json';
+// import Logo from '../../assets/Ani3.json';
 import { AiOutlineClose } from 'react-icons/ai';
 import { AiOutlineAlignRight} from 'react-icons/ai';
 import {motion} from 'framer-motion';
 import Resume from '../../assets/Johnwesly_Uchula_Resume.pdf'
+import Logo from '../../assets/logo.png'; 
 const Header = ({toggleMenu,menuOpen, setMenuOpen}) => {
 const defaultOptions = {
   loop: true,           
@@ -18,7 +19,8 @@ const defaultOptions = {
    <header>
       <div className='header_content'>
         <a href="/">
-        <Lottie   options={defaultOptions} height={50} width={70} />
+        {/* <Lottie   options={defaultOptions} height={50} width={70} /> */}
+        <img src={Logo} alt="Logo" className='header_logo' style={{height: '30px'}} />
         </a>
         <AiOutlineAlignRight 
           className='header_menuicon'

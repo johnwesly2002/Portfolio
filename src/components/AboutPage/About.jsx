@@ -4,11 +4,8 @@ import {motion} from "framer-motion";
 import AboutImage from "../../assets/Ani2.json";
 const About = ({ dimensions }) => {
 		return (
-			<motion.section
+			<section
 				id="About"
-				initial={{ opacity: 0, y: 30 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				transition={{ duration: 1 }}
 			>
 				<h2 className="sectionheading">About Me</h2>
 				<div className="AboutInnerSection">
@@ -46,7 +43,7 @@ const About = ({ dimensions }) => {
 						/>
 					</div>
 				</div>
-			</motion.section>
+			</section>
 		);
 };
 

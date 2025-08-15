@@ -3,7 +3,7 @@ import '../../App.css';
 import './styles.css';
 import Jio from '../../assets/Jio.jpg';
 import Nineleaps from '../../assets/nineleaps.png';
-import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const experiences = [
   {
@@ -104,10 +104,7 @@ const ExperienceCard = ({ exp }) => {
 const ExperiencePage = ({activeTab, handleTabClick}) => {
 
   return (
- <motion.section id='Experience' 				
-      initial={{ opacity: 0, y: 30 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			transition={{ duration: 1 }}>
+ <section id='Experience'>
       <h2 className='sectionheading'>Where I’ve Worked</h2>
       <div className="Experienceinner">
         <div className='ExperienceMenu'>
@@ -146,7 +143,7 @@ const ExperiencePage = ({activeTab, handleTabClick}) => {
           )}
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

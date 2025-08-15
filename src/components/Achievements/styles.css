@@ -1,109 +1,64 @@
-.section {
-  font-family: var(--fontfamily);
-}
-
-.Achcards {
-  margin: 50px 0 0 0;
-  display: flex;
-  width: 100%;
-  gap: 1.5rem;
-  padding: 3rem;
-  border: 1px solid #636363;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  flex-wrap: wrap;
-}
-
-.Achcards::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  z-index: 0;
-  border-radius: 20px;
-}
-
-.Achcard {
-  z-index: 1;
-  padding: 2.5rem;
-  border-radius: 1rem;
-  backdrop-filter: none;
-  flex: 1 1 250px;
-  min-width: 250px;
+.achievements-section {
+  color: white;
   text-align: center;
+  padding: 90px 20px;
+  font-family: var(--font-sans);
 }
 
-.AchNum {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.Ach-label {
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
-}
-
-.target {
+.sectionheading {
   font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-.subLabel {
+.achievements-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.achievement-card {
+  flex: 1 1 calc(40.333% - 25px);
+  max-width: calc(40.333% - 25px);
+  backdrop-filter: 10px;
+  border: 0.5px solid rgba(239, 239, 239, 0.05);
+  padding: 20px;
+  transition: transform 0.3s ease;
+  /* background-color: var(--backgroundhover); */
+  text-align: left;
+  min-width: 280px;
+  min-height: 220px;
+}
+
+
+.achievement-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.achievement-card h4 {
+  margin: 0 0 5px 0;
   font-size: 1.1rem;
-  margin-top: 0.25rem;
+  font-weight: 600;
 }
 
+.achievement-card p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  line-height: 1.4;
+}
 
 @media (max-width: 1024px) {
-  .AchNum {
-    font-size: 3.5rem;
-  }
-
-  .Achcard {
-    padding: 2rem;
-  }
-
-  .subLabel {
-    font-size: 1rem;
+  .achievement-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(100% - 20px);
   }
 }
-
-@media (max-width: 768px) {
-  .Achcards {
-    flex-direction: column;
-    padding: 2rem;
-  }
-
-  .Achcard {
-    width: 100%;
-    padding: 4.5rem;
-  }
-
-  .AchNum {
-    font-size: 4rem;
-  }
-
-  .subLabel {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .Achcards {
-    gap: 1rem;
-    padding: 2rem;
-  }
-
-  .Achcard {
-    padding: 4rem;
-  }
-
-  .AchNum {
-    font-size: 2.8rem;
-  }
-
-  .subLabel {
-    font-size: 0.85rem;
+@media (max-width: 600px) {
+  .achievement-card {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }

@@ -9,6 +9,7 @@ import ExperiencePage from './components/ExperiencePage/ExperiencePage';
 import EducationPage from './components/EducationPage/EducationPage';
 import Header from './components/Header/Header';
 import Achievements from './components/Achievements/Achievements';
+import Background from './components/Background/Background';
 
 
 const handleTabUpdate  = (index, Tabclass) => {
@@ -138,6 +139,12 @@ function App() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
   return (
     <>
+    <Background
+      colorStops={["#7CFF67", "#AB99E5", "#5227FF"]}
+      blend={0.5}
+      amplitude={1.3}
+      speed={0.5}
+    />
     <Header toggleMenu={toggleMenu} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
     <main id='main-Container'>
 
