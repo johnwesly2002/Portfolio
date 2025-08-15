@@ -760,8 +760,14 @@ footer .lottie {
   #Projects {
     margin-inline: 10px;
   }
+  #Experience {
+    margin-inline: 10px;
+  }
   #About {
     margin-inline: 10px;
+  }
+  #Achievements {
+     margin-inline: 10px;
   }
   #Education {
     margin-inline: 10px;
@@ -948,6 +954,21 @@ footer .lottie {
   }
   .intro-1 {
     font-size: 13px;
+  }
+    #Projects {
+    margin-inline: 10px;
+  }
+  #About {
+    margin-inline: 10px;
+  }
+  #Achievements {
+     margin-inline: 10px;
+  }
+  #Experience {
+    margin-inline: 10px;
+  }
+  #Education {
+    margin-inline: 10px;
   }
   .accounts {
     display: flex;
