@@ -19,14 +19,13 @@
   --tab-height: 42px;
   --mobilefont: 18px;
   --headingweight: 800px;
-  --tab-width: 120px;
+  --tab-width: 100px;
 }
 *, ::before, ::after {
   box-sizing: border-box !important;
 }
 body {
-  margin: 0;
-  padding: 0;
+  overflow-x: hidden !important;
 }
 
 /* body::before {
@@ -93,8 +92,8 @@ h1, h2, h3, h4, h5, h6 {
 header {
   position: fixed;
   width: 100%;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   z-index: 10;
 }
 header a {
@@ -762,7 +761,7 @@ footer .lottie {
     margin-inline: 10px;
   }
   #About {
-    margin-inline: 5px;
+    margin-inline: 10px;
   }
   #Education {
     margin-inline: 10px;
