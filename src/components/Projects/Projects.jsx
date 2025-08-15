@@ -2,7 +2,7 @@ import "../../App.css";
 import { LuGithub } from "react-icons/lu";
 import { GoLinkExternal } from "react-icons/go";
 import { CiFolderOn } from "react-icons/ci";
-import SpotlightCard from "../constants/SpotlightCard/SpotlightCard.jsx";
+import SpotlightCard from "../constants/spotlightCard/SpotlightCard.jsx";
 import { Link } from "react-router-dom";
 import "./styles.css";
 export const projects = [

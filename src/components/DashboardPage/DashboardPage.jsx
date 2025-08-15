@@ -3,8 +3,8 @@ import { LuGithub } from "react-icons/lu";
 import { FiLinkedin } from "react-icons/fi";
 import { SiLeetcode } from "react-icons/si";
 import {motion} from 'framer-motion';
-import ShinyText from '../constants/ShinyText/ShinyText';
-import SplitText from '../constants/SplitText/SplitText';
+import ShinyText from '../constants/shinyText/ShinyText';
+import SplitText from '../constants/splitText/SplitText';
 const DashboardPage = ({transition}) => {
     const containerVariants = {
   hidden: {},
