@@ -465,7 +465,7 @@ line-height: 1.4;
     margin-bottom: 10px;
     padding-left: 20px;
     text-align: start;
-    font-family: var(--fontfamily);
+    font-family: var(--font-sans);
     font-size: 15px;
 }
 
@@ -639,7 +639,7 @@ line-height: 1.4;
 #Contact p {
   max-width: 800px;
   text-align:center;
-  font-family: var(--fontfamily);
+  font-family: var(--font-sans);
   font-size: var(--fontcolor);
 }
 
@@ -740,8 +740,15 @@ footer {
 }
 footer p {
   font-family: var(--fontfamily);
-  font-size: 12px;
+  font-size: 15px;
 }
+
+footer .text{
+  font-family: var(--fontfamily);
+  font-size: 15px;
+}
+
+
 footer .lottie {
   margin-top: -15px;
 }
@@ -982,5 +989,6 @@ footer .lottie {
     font-family: var(--fontfamily);
     font-size: 10px;
   }
+
 }
 
