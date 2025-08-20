@@ -452,6 +452,7 @@ line-height: 1.4;
 
 .ExperienceContent {
   font-family: var(--font-sans);
+  color: var(--fontcolor);
   margin-left: 10px;
 }
 .ExperienceContent ul {
@@ -545,6 +546,7 @@ line-height: 1.4;
 
 .EducationContent {
   font-family: var(--font-sans);
+  color: var(--fontcolor);
   margin-left: 10px;
 }
 .EducationContent ul {
